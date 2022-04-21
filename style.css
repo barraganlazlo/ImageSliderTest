@@ -11,7 +11,7 @@ body {
 .item-card-container {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
 }
 
 .item-card {
@@ -22,22 +22,22 @@ body {
     width: 100%;
 }
 
-@media only screen and ((min-width: 600px) and (min-device-width: 600px)) {
-    .first-item-card {
-        grid-column-end: span 2;
-        grid-row-end: span 2;
-        margin: 2.5%;
-    }
+.first-item-card {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+    margin: 2.5%;
 }
 
 
-
-@media only screen and ((max-width: 600px) or (max-device-width: 600px)) {
+@media screen and (max-device-width: 640px) {
     .item-card-container {
         display: inline-block;
         overflow: hidden;
         background-color: blueviolet;
         white-space: nowrap;
+    }
+    .first-item-card {
+        margin:5%
     }
     .item-card{
         display:none;
